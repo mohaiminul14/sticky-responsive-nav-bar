@@ -1,0 +1,142 @@
+/*===============add font=============== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/*===============all=============== */
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/*===============navigation=============== */
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 10vh;
+    background-color: lightsteelblue;
+    transition: all 0.3s ease;
+    /*for header sticky */
+    position: sticky;
+    top: 0;
+    
+}
+
+/*===============logo=============== */
+.logo{
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 20px;
+}
+
+/*===============nav menu=============== */
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+}
+.nav-links li{
+    list-style: none;
+}
+.nav-links li a{
+    text-decoration: none;
+    color: lightyellow;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+/*===============demo paragraph=============== */
+p{
+    width: 70%;
+    text-align: justify;
+    margin: 0 auto;
+    padding: 20px 0px;
+}
+
+/*===============toggle icon hide when website is in full size=============== */
+.toggle-icon{
+    display: none;
+    cursor: pointer;
+}
+
+/*===============toggle design=============== */
+.toggle-icon div{
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+    transition: all 0.5s ease;
+}
+
+/*===============media query=============== */
+@media screen and (max-width:1024px) {
+    
+    /*===============nav bar er gap thik korar=============== */
+    .nav-links{
+        width: 60%;
+    }
+
+}
+
+/*===============media query=============== */
+@media screen and (max-width:768px) {
+    
+    body{
+        overflow-x: hidden;
+    }
+
+    /*===============nav menu=============== */
+    .nav-links{
+        position: absolute;
+        right: 0px;
+        height: 90vh;
+        top: 10vh;
+        background-color: lightsteelblue;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 40%;
+        transform: translateX(100%);
+        transition: transform 1s ease-in;
+    }
+
+    .nav-links li{
+        opacity: 0;
+    }
+    /*===============mobile a asar por show korar jonno=============== */
+    .toggle-icon{
+        display: block;
+    }
+    /*===============ai name a kono class html a ni sudu bahir theke slide anar jonno ai class ta er css ta banano hosie ja js a bebohar kora hoise=============== */
+    .nav-active{
+        transform: translateX(0%);
+    }
+/*===============Animation=============== */
+    @keyframes navLinkFade {
+        form{
+            opacity: 0;
+            transform: translateX(50px);
+        }
+        to{
+            opacity: 1;
+            transform: translateX(0px);
+        }
+    }
+/*===============toggle button cross=============== */
+/*===============toggle-cross name kono class nai html a js er jonno banano hoise=============== */
+    .toggle-cross .line1{
+        transform: rotate(-45deg) translate(-5px,6px);
+
+    }
+    .toggle-cross .line2{
+        opacity: 0;
+    }
+    .toggle-cross .line3{
+        transform: rotate(45deg) translate(-5px,-6px);
+        
+    }
+
+}
